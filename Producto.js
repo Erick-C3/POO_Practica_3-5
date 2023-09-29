@@ -1,5 +1,3 @@
-const Cliente  = require("./ClienteResidencial.js");
-//
 class Producto {
     #nombreProducto;        // puede haber muchos procuctos
     #precioProducto;        // valor numérico

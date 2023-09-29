@@ -17,10 +17,12 @@ class ClienteComercial extends NuestrosClientes {
         return (this.#descuento);
     }
 
-// Procedimientos 
-
-
-
+    comprarProducto(prod, cant){
+        let desc = this.getDescuento();
+        console.log("DescCompraProd: "+desc);
+        console.log("Cliente: " + this.getNombreCliente() + " está comprando: " + cant + " unidad/es de: "+prod.getNombreProducto() );
+        this._montoComprado += ((prod.getPrecioProducto())*cant)*(1-desc); 
+    }
 }
 
 module.exports = ClienteComercial;
